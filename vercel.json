@@ -4,7 +4,6 @@
         "runtime": "nodejs20.x"
       }
     },
-    "buildCommand": "tsc && npm run build",
-    "outputDirectory": "dist"
+    "buildCommand": "tsc && npm run build"
   }
   
