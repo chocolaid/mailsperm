@@ -4,9 +4,9 @@ export default function CashApp() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
-    amount: '',
-    subject: ''
+    subject: '',
+    replyto: '',
+    message: ''
   })
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -27,7 +27,7 @@ export default function CashApp() {
 
       if (response.ok) {
         setStatus('success')
-        setFormData({ name: '', email: '', message: '', amount: '', subject: '' })
+        setFormData({ name: '', email: '', subject: '', replyto: '', message: '' })
       } else {
         setStatus('error')
       }
@@ -97,16 +97,16 @@ export default function CashApp() {
         </div>
 
         <div>
-          <label htmlFor="amount" style={{ display: 'block', marginBottom: '0.5rem' }}>
-            Amount:
+          <label htmlFor="replyto" style={{ display: 'block', marginBottom: '0.5rem' }}>
+            Reply-To Email (Optional):
           </label>
           <input
-            type="text"
-            id="amount"
-            name="amount"
-            value={formData.amount}
+            type="email"
+            id="replyto"
+            name="replyto"
+            value={formData.replyto}
             onChange={handleChange}
-            placeholder="$0.00"
+            placeholder="reply@example.com"
             style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px' }}
           />
         </div>
@@ -120,8 +120,10 @@ export default function CashApp() {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            rows={4}
-            style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+            rows={6}
+            placeholder="Enter your message here..."
+            style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px', resize: 'vertical' }}
           />
         </div>
 

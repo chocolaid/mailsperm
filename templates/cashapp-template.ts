@@ -94,8 +94,8 @@ export const cashappTemplate = `
             <div class="greeting">Hello $name,</div>
             
             <div class="amount">
-                <div class="amount-label">Payment Amount</div>
-                <div class="amount-value">$amount</div>
+                <div class="amount-label">Payment Notification</div>
+                <div class="amount-value">CashApp</div>
             </div>
             
             <div class="message">

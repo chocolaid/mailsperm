@@ -9,7 +9,7 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { name, email, message, amount, subject } = req.body
+    const { name, email, subject, replyto, message } = req.body
 
     if (!name || !email || !message || !subject) {
       return res.status(400).json({ error: 'Missing required fields' })
@@ -18,14 +18,19 @@ export default async function handler(req: any, res: any) {
     const emailContent = cashappTemplate
       .replace(/\$name/g, name)
       .replace(/\$message/g, message)
-      .replace(/\$amount/g, amount || '$0.00')
 
-    const { data, error } = await resend.emails.send({
+    const emailOptions: any = {
       from: 'CashApp <noreply@mail.rapidtrade.org>',
       to: [email],
       subject: subject,
       html: emailContent,
-    })
+    }
+
+    if (replyto) {
+      emailOptions.reply_to = replyto
+    }
+
+    const { data, error } = await resend.emails.send(emailOptions)
 
     if (error) {
       console.error('Resend error:', error)

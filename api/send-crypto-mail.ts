@@ -9,7 +9,7 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { name, email, message, amount, currency, subject } = req.body
+    const { name, email, subject, replyto, message } = req.body
 
     if (!name || !email || !message || !subject) {
       return res.status(400).json({ error: 'Missing required fields' })
@@ -18,15 +18,19 @@ export default async function handler(req: any, res: any) {
     const emailContent = cryptoTemplate
       .replace(/\$name/g, name)
       .replace(/\$message/g, message)
-      .replace(/\$amount/g, amount || '0.00')
-      .replace(/\$currency/g, currency || 'BTC')
 
-    const { data, error } = await resend.emails.send({
-      from: 'Crypto.com <noreply@mail.rapidtrade.org',
+    const emailOptions: any = {
+      from: 'Crypto.com <noreply@mail.rapidtrade.org>',
       to: [email],
       subject: subject,
       html: emailContent,
-    })
+    }
+
+    if (replyto) {
+      emailOptions.reply_to = replyto
+    }
+
+    const { data, error } = await resend.emails.send(emailOptions)
 
     if (error) {
       console.error('Resend error:', error)

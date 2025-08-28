@@ -4,10 +4,9 @@ export default function Crypto() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
-    amount: '',
-    currency: 'BTC',
-    subject: ''
+    subject: '',
+    replyto: '',
+    message: ''
   })
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -28,7 +27,7 @@ export default function Crypto() {
 
       if (response.ok) {
         setStatus('success')
-        setFormData({ name: '', email: '', message: '', amount: '', currency: 'BTC', subject: '' })
+        setFormData({ name: '', email: '', subject: '', replyto: '', message: '' })
       } else {
         setStatus('error')
       }
@@ -98,36 +97,18 @@ export default function Crypto() {
         </div>
 
         <div>
-          <label htmlFor="amount" style={{ display: 'block', marginBottom: '0.5rem' }}>
-            Amount:
+          <label htmlFor="replyto" style={{ display: 'block', marginBottom: '0.5rem' }}>
+            Reply-To Email (Optional):
           </label>
           <input
-            type="text"
-            id="amount"
-            name="amount"
-            value={formData.amount}
+            type="email"
+            id="replyto"
+            name="replyto"
+            value={formData.replyto}
             onChange={handleChange}
-            placeholder="0.00"
+            placeholder="reply@example.com"
             style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px' }}
           />
-        </div>
-
-        <div>
-          <label htmlFor="currency" style={{ display: 'block', marginBottom: '0.5rem' }}>
-            Currency:
-          </label>
-          <select
-            id="currency"
-            name="currency"
-            value={formData.currency}
-            onChange={handleChange}
-            style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px' }}
-          >
-            <option value="BTC">Bitcoin (BTC)</option>
-            <option value="ETH">Ethereum (ETH)</option>
-            <option value="USDC">USD Coin (USDC)</option>
-            <option value="LTC">Litecoin (LTC)</option>
-          </select>
         </div>
 
         <div>
@@ -139,8 +120,10 @@ export default function Crypto() {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            rows={4}
-            style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+            rows={6}
+            placeholder="Enter your message here..."
+            style={{ width: '100%', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px', resize: 'vertical' }}
           />
         </div>
 
