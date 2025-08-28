@@ -32,11 +32,10 @@ export default function CashApp() {
         ...(formData.replyto && { reply_to: formData.replyto })
       }
 
-      // Call Resend API directly
-      const response = await fetch('https://api.resend.com/emails', {
+      // Call our proxy API
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${import.meta.env.RESEND_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(emailData),
@@ -66,7 +65,7 @@ export default function CashApp() {
     }))
   }
 
-    return (
+  return (
     <div style={{ maxWidth: '100%', margin: '0 auto', padding: '0 1rem' }}>
       {/* Terminal header */}
       <div style={{
@@ -249,7 +248,7 @@ export default function CashApp() {
             />
           </div>
 
-          <div>
+    <div>
             <label htmlFor="message" style={{ 
               display: 'block', 
               marginBottom: '0.5rem',

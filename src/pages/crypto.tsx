@@ -32,11 +32,10 @@ export default function Crypto() {
         ...(formData.replyto && { reply_to: formData.replyto })
       }
 
-      // Call Resend API directly
-      const response = await fetch('https://api.resend.com/emails', {
+      // Call our proxy API
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${import.meta.env.RESEND_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(emailData),
