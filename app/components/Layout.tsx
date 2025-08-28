@@ -1,6 +1,8 @@
-import { Link, Outlet } from 'react-router'
+'use client'
 
-export default function Layout() {
+import Link from 'next/link'
+
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div style={{
       minHeight: '100vh',
@@ -33,7 +35,7 @@ export default function Layout() {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <Link 
-              to="/" 
+              href="/" 
               style={{ 
                 color: '#00ff00', 
                 textDecoration: 'none', 
@@ -55,7 +57,7 @@ export default function Layout() {
             </Link>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link 
-                to="/about" 
+                href="/cashapp" 
                 style={{ 
                   color: '#00ff00', 
                   textDecoration: 'none',
@@ -77,7 +79,7 @@ export default function Layout() {
                 [CASHAPP]
               </Link>
               <Link 
-                to="/contact" 
+                href="/crypto" 
                 style={{ 
                   color: '#00ff00', 
                   textDecoration: 'none',
@@ -119,7 +121,7 @@ export default function Layout() {
         maxWidth: '100vw',
         overflow: 'hidden'
       }}>
-        <Outlet />
+        {children}
       </main>
     </div>
   )

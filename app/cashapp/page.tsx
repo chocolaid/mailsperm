@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { cashappTemplate } from '../../templates/cashapp-template'
 
@@ -44,7 +46,7 @@ export default function CashApp() {
       const result = await response.json()
 
       if (response.ok) {
-        setStatus('success')
+        setStatus('success')  
         setFormData({ name: '', email: '', subject: '', replyto: '', message: '' })
       } else {
         console.error('API error:', result)
@@ -248,7 +250,7 @@ export default function CashApp() {
             />
           </div>
 
-    <div>
+          <div>
             <label htmlFor="message" style={{ 
               display: 'block', 
               marginBottom: '0.5rem',

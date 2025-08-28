@@ -1,9 +1,0 @@
-{
-    "functions": {
-      "api-build/*.js": {
-        "runtime": "nodejs20.x"
-      }
-    },
-    "buildCommand": "tsc && npm run build"
-  }
-  

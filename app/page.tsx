@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           
           <Link 
-            to="/about" 
+            href="/cashapp" 
             style={{
               display: 'inline-block',
               background: 'linear-gradient(45deg, #00ff00, #00cc00)',
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
           
           <Link 
-            to="/contact" 
+            href="/crypto" 
             style={{
               display: 'inline-block',
               background: 'linear-gradient(45deg, #00ff00, #00cc00)',
@@ -271,5 +271,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
