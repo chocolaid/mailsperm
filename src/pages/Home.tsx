@@ -2,73 +2,273 @@ import { Link } from 'react-router'
 
 export default function Home() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem', textAlign: 'center' }}>
-      <h1>Mail Sender Application</h1>
-      <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#666' }}>
-        Send professional emails using CashApp and Coinbase templates
-      </p>
-      
-      <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <div style={{ 
-          border: '1px solid #00D632', 
-          borderRadius: '8px', 
-          padding: '2rem', 
-          minWidth: '250px',
-          backgroundColor: '#f8fff8'
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+      {/* Terminal-style header */}
+      <div style={{
+        background: 'rgba(0, 0, 0, 0.8)',
+        border: '2px solid #00ff00',
+        borderRadius: '8px',
+        padding: '2rem',
+        marginBottom: '2rem',
+        boxShadow: '0 0 30px rgba(0, 255, 0, 0.3)',
+        position: 'relative'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: '10px',
+          left: '10px',
+          display: 'flex',
+          gap: '8px'
         }}>
-          <h2 style={{ color: '#00D632', marginBottom: '1rem' }}>CashApp</h2>
-          <p style={{ marginBottom: '1.5rem' }}>Send CashApp payment notifications with custom messages</p>
-          <Link 
-            to="/about" 
-            style={{ 
-              display: 'inline-block',
-              backgroundColor: '#00D632', 
-              color: 'white', 
-              padding: '0.75rem 1.5rem', 
-              textDecoration: 'none', 
-              borderRadius: '4px',
-              fontWeight: 'bold'
-            }}
-          >
-            Send CashApp Mail
-          </Link>
+          <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }}></div>
+          <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }}></div>
+          <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27ca3f' }}></div>
         </div>
         
-        <div style={{ 
-          border: '1px solid #00D4AA', 
-          borderRadius: '8px', 
-          padding: '2rem', 
-          minWidth: '250px',
-          backgroundColor: '#f8fffe'
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <h1 style={{
+            fontSize: '2.5rem',
+            margin: '0 0 1rem 0',
+            color: '#00ff00',
+            textShadow: '0 0 20px rgba(0, 255, 0, 0.5)',
+            fontFamily: 'monospace'
+          }}>
+            &gt; MAIL_SENDER.exe
+          </h1>
+          <div style={{
+            fontSize: '1.1rem',
+            color: '#00ff00',
+            opacity: 0.8,
+            marginBottom: '1.5rem',
+            fontFamily: 'monospace'
+          }}>
+            [INITIALIZING...] Professional email delivery system
+          </div>
+          <div style={{
+            fontSize: '0.9rem',
+            color: '#00ff00',
+            opacity: 0.6,
+            fontFamily: 'monospace'
+          }}>
+            Status: READY | Protocol: SMTP | Encryption: ENABLED
+          </div>
+        </div>
+      </div>
+
+      {/* Main content grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+        {/* CashApp Module */}
+        <div style={{
+          background: 'rgba(0, 0, 0, 0.7)',
+          border: '2px solid #00ff00',
+          borderRadius: '8px',
+          padding: '2rem',
+          position: 'relative',
+          boxShadow: '0 0 25px rgba(0, 255, 0, 0.2)',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 35px rgba(0, 255, 0, 0.4)'
+          e.currentTarget.style.transform = 'translateY(-5px)'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 25px rgba(0, 255, 0, 0.2)'
+          e.currentTarget.style.transform = 'translateY(0)'
         }}>
-          <h2 style={{ color: '#00D4AA', marginBottom: '1rem' }}>Crypto.com</h2>
-          <p style={{ marginBottom: '1.5rem' }}>Send Crypto.com transaction notifications with crypto details</p>
+          <div style={{
+            position: 'absolute',
+            top: '10px',
+            right: '10px',
+            fontSize: '0.8rem',
+            color: '#00ff00',
+            opacity: 0.6,
+            fontFamily: 'monospace'
+          }}>
+            [MODULE_001]
+          </div>
+          
+          <h2 style={{
+            color: '#00ff00',
+            marginBottom: '1rem',
+            fontSize: '1.5rem',
+            fontFamily: 'monospace',
+            textShadow: '0 0 10px rgba(0, 255, 0, 0.3)'
+          }}>
+            &gt; CASHAPP_PROTOCOL
+          </h2>
+          
+          <div style={{
+            color: '#00ff00',
+            opacity: 0.8,
+            marginBottom: '1.5rem',
+            lineHeight: '1.6',
+            fontFamily: 'monospace'
+          }}>
+            Execute payment notification delivery<br/>
+            Target: CashApp infrastructure<br/>
+            Encryption: AES-256
+          </div>
+          
           <Link 
-            to="/contact" 
-            style={{ 
+            to="/about" 
+            style={{
               display: 'inline-block',
-              backgroundColor: '#00D4AA', 
-              color: 'white', 
-              padding: '0.75rem 1.5rem', 
-              textDecoration: 'none', 
+              background: 'linear-gradient(45deg, #00ff00, #00cc00)',
+              color: '#000',
+              padding: '0.8rem 2rem',
+              textDecoration: 'none',
               borderRadius: '4px',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              fontFamily: 'monospace',
+              textTransform: 'uppercase',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 0 15px rgba(0, 255, 0, 0.3)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 25px rgba(0, 255, 0, 0.6)'
+              e.currentTarget.style.transform = 'scale(1.05)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 15px rgba(0, 255, 0, 0.3)'
+              e.currentTarget.style.transform = 'scale(1)'
             }}
           >
-            Send Crypto.com Mail
+            [EXECUTE]
+          </Link>
+        </div>
+
+        {/* Crypto.com Module */}
+        <div style={{
+          background: 'rgba(0, 0, 0, 0.7)',
+          border: '2px solid #00ff00',
+          borderRadius: '8px',
+          padding: '2rem',
+          position: 'relative',
+          boxShadow: '0 0 25px rgba(0, 255, 0, 0.2)',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 35px rgba(0, 255, 0, 0.4)'
+          e.currentTarget.style.transform = 'translateY(-5px)'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 25px rgba(0, 255, 0, 0.2)'
+          e.currentTarget.style.transform = 'translateY(0)'
+        }}>
+          <div style={{
+            position: 'absolute',
+            top: '10px',
+            right: '10px',
+            fontSize: '0.8rem',
+            color: '#00ff00',
+            opacity: 0.6,
+            fontFamily: 'monospace'
+          }}>
+            [MODULE_002]
+          </div>
+          
+          <h2 style={{
+            color: '#00ff00',
+            marginBottom: '1rem',
+            fontSize: '1.5rem',
+            fontFamily: 'monospace',
+            textShadow: '0 0 10px rgba(0, 255, 0, 0.3)'
+          }}>
+            &gt; CRYPTO_PROTOCOL
+          </h2>
+          
+          <div style={{
+            color: '#00ff00',
+            opacity: 0.8,
+            marginBottom: '1.5rem',
+            lineHeight: '1.6',
+            fontFamily: 'monospace'
+          }}>
+            Execute transaction notification delivery<br/>
+            Target: Crypto.com infrastructure<br/>
+            Encryption: RSA-2048
+          </div>
+          
+          <Link 
+            to="/contact" 
+            style={{
+              display: 'inline-block',
+              background: 'linear-gradient(45deg, #00ff00, #00cc00)',
+              color: '#000',
+              padding: '0.8rem 2rem',
+              textDecoration: 'none',
+              borderRadius: '4px',
+              fontWeight: 'bold',
+              fontFamily: 'monospace',
+              textTransform: 'uppercase',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 0 15px rgba(0, 255, 0, 0.3)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 25px rgba(0, 255, 0, 0.6)'
+              e.currentTarget.style.transform = 'scale(1.05)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 15px rgba(0, 255, 0, 0.3)'
+              e.currentTarget.style.transform = 'scale(1)'
+            }}
+          >
+            [EXECUTE]
           </Link>
         </div>
       </div>
-      
-      <div style={{ marginTop: '3rem', padding: '1.5rem', backgroundColor: '#f8f9fa', borderRadius: '8px' }}>
-        <h3>Features</h3>
-        <ul style={{ textAlign: 'left', maxWidth: '400px', margin: '0 auto' }}>
-          <li>Professional email templates</li>
-          <li>Variable substitution ($name, $message, $amount, $currency)</li>
-          <li>Responsive design</li>
-          <li>Real-time form validation</li>
-          <li>Success/error notifications</li>
-        </ul>
+
+      {/* System info panel */}
+      <div style={{
+        background: 'rgba(0, 0, 0, 0.8)',
+        border: '2px solid #00ff00',
+        borderRadius: '8px',
+        padding: '2rem',
+        boxShadow: '0 0 20px rgba(0, 255, 0, 0.2)'
+      }}>
+        <h3 style={{
+          color: '#00ff00',
+          marginBottom: '1.5rem',
+          fontSize: '1.3rem',
+          fontFamily: 'monospace',
+          textShadow: '0 0 10px rgba(0, 255, 0, 0.3)'
+        }}>
+          &gt; SYSTEM_SPECIFICATIONS
+        </h3>
+        
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '1.5rem',
+          fontFamily: 'monospace'
+        }}>
+          <div>
+            <div style={{ color: '#00ff00', opacity: 0.8, marginBottom: '0.5rem' }}>PROTOCOLS:</div>
+            <div style={{ color: '#00ff00', opacity: 0.6, fontSize: '0.9rem' }}>
+              • SMTP/ESMTP<br/>
+              • TLS 1.3<br/>
+              • OAuth 2.0
+            </div>
+          </div>
+          
+          <div>
+            <div style={{ color: '#00ff00', opacity: 0.8, marginBottom: '0.5rem' }}>FEATURES:</div>
+            <div style={{ color: '#00ff00', opacity: 0.6, fontSize: '0.9rem' }}>
+              • Template engine<br/>
+              • Variable substitution<br/>
+              • Real-time validation
+            </div>
+          </div>
+          
+          <div>
+            <div style={{ color: '#00ff00', opacity: 0.8, marginBottom: '0.5rem' }}>SECURITY:</div>
+            <div style={{ color: '#00ff00', opacity: 0.6, fontSize: '0.9rem' }}>
+              • End-to-end encryption<br/>
+              • Rate limiting<br/>
+              • Input sanitization
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
