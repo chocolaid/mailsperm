@@ -23,6 +23,7 @@ export default function CashApp() {
       // Prepare email content with template
       const emailContent = cashappTemplate
         .replace(/\$name/g, formData.name)
+        .replace(/\$subject/g, formData.subject)
         .replace(/\$message/g, formData.message)
 
       // Prepare email data for Resend API
