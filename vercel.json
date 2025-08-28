@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/send-email.ts": {
+      "runtime": "@vercel/node@22.0.0"
+    }
+  }
+}
