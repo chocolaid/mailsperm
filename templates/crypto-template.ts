@@ -1,7 +1,5 @@
 export const cryptoTemplate = `
-
-<div id=":19q" class="ii gt" jslog="20277; u014N:xr6bB; 1:WyIjdGhyZWFkLWY6MTc5NTIzNDg3OTI5MzYyNzc3MiJd; 4:WyIjbXNnLWE6ci03ODU4OTY2OTA5NTU5NTY2NjcyIixudWxsLG51bGwsbnVsbCw0LDEsWzEsMCwwXSwwLDAsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLDMsbnVsbCxudWxsLFswLDNdLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLDAsMF0."><div id=":19r" class="a3s aiL adM"><div class="HOEnZb"><div class="adm"><div id="q_29" class="ajR h4" data-tooltip="Hide expanded content" aria-label="Hide expanded content" aria-expanded="true"><div class="ajT"></div></div></div><div class="im"><div dir="ltr"><div class="gmail_quote"><div dir="auto"><br><blockquote type="cite"><div dir="ltr"><center>
-        <table border="0" cellpadding="9" cellspacing="0" width="100%" bgcolor="#1C2B53">
+<table border="0" cellpadding="9" cellspacing="0" width="100%" bgcolor="#1C2B53">
             <tbody><tr bgcolor="#1C2B53">
                 <td align="center" height="100%" valign="top" width="100%">
                     <p style="display:none">We will contact you with this email address from now on.
@@ -194,11 +192,5 @@ export const cryptoTemplate = `
                 </td>
             </tr>
         </tbody></table>
-    </center>
-<img src="https://ci3.googleusercontent.com/meips/ADKq_Na7plfh7g30Hoc3EaAT3LxkZOpLHzNlzoWQ81S9Q8g99FIw2AghA-acrA3Bz1AHM7wYAJYiW9fKfvxOusl4gDWcmswxaBcTiBMJsdNOHBtMaZZGYRRQ3Xij4ir1Zw0Y73XCquXXa3JoyvDztoVAlVhBKyk073vp86p3NsD0YV-DzxK5h8Rz_B-97lwJZXF-f8rV5tBRRts6n7facpNDDtFbrdEvL_uq-DIuthpwZ4tJhz3hVdODsv1IEQ_3a_e03Sqx3ex072_LU5o3rGPWSf7Tlos3-3ns4Is_-GxwKFvxMr5KPyWeM2plM8lctBdSTDRm6a7BSkDErCyttR9MpO0MBEzzOwj2cnVNqwcFE4yj1YZ6eYlTK3ThQlwgh9bcruZ9JPaqikuVL_lyuk1uSF2IAHFTkfkp7tS8pDBOekmH42q4YwACuK8okwollzrOTrKiGEFXn3JW2f78wWL6hLVPHMyI0nVHUu7TJLy64OojwgPeC3sFF5fRbpVcspC7iFhKts_j93AS8zuxUpA3XNwzIjZPs0c9txYtlledihlw51tyFHn8cvTWtfKSJ-vJAsFnNEBsRhGCy93U60voeD-pj7eY3B3ajrstUiMG8AB5_1tYhCI1KjhEPiHntRy3xOAWlS7Nf8mm1r729D7Ya0_H46fBdJjniHvGYEL_YeyMK6nsP7IbYzYzyw=s0-d-e1-ft#http://url1137.crypto.com/wf/open?upn=u001.4s-2FZl4GpLhHu5NXtvbVc1XEkbLQk9i0z6yeKFYaufWJ99kiyxLeTHt-2FiutDCDxywO-2FVqU1XcYNR-2BL9wGV6wZA8bzQbzc7wY45wGexZzDKFT1W3EUfM8N4xECYX7nt61FkL6vFfCkqMJ11wvN7aVkZPGYiL7zuJUSe0WyDZyuFKAO-2Bv7K-2F4LnKF-2Fw6C60Nd7dGc0G6wI9yXWymyXYVDGj3d0R7Bg3BJht926zzxGG-2BvwkYUUOqWxA0j8i-2FByqc20ovcTuswbh8-2F3tLSjKPUAEZuQm17OQ-2F4R0exMEmgDzbFGPy2GGcMI5qxJv9F0BdcOR-2BzWoD1h-2FamPtUC1WjeurRKYXRNbP835M2DADtL9L6SHJx7JjkyEEna2IDAFzjkwUmB0H2gixR76dSqwKmQQy6rM9S07A9f7OkLzVHL47tNQ-3D" alt="" width="1" height="1" border="0" style="height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important" class="CToWUd" data-bit="iit">
-
-
-</div></blockquote></div></div></div>
-</div></div></div></div>
 
 `
