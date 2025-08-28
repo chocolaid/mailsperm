@@ -19,6 +19,24 @@ export async function POST(request: NextRequest) {
       to,
       subject,
       html,
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high',
+        'X-Mailer': 'Mail Sender System',
+        'List-Unsubscribe': '<mailto:unsubscribe@rapidtrade.org>',
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click'
+      },
+      tags: [
+        {
+          name: 'category',
+          value: 'transactional'
+        },
+        {
+          name: 'type',
+          value: 'notification'
+        }
+      ],
       ...(reply_to && { reply_to })
     })
 

