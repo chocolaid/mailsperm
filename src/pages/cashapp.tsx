@@ -111,7 +111,7 @@ export default function CashApp() {
           />
         </div>
 
-        <div>
+    <div>
           <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem' }}>
             Message:
           </label>

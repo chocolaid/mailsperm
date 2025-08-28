@@ -1,16 +1,10 @@
 {
   "functions": {
     "api/send-cashapp-mail.ts": {
-      "runtime": "nodejs20.x"
+      "runtime": "@vercel/node@3.0.7"
     },
     "api/send-crypto-mail.ts": {
-      "runtime": "nodejs20.x"
+      "runtime": "@vercel/node@3.0.7"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ]
+  }
 }
