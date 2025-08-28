@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { cryptoTemplate } from '../../templates/crypto-template'
 
 export default function Crypto() {
   const [formData, setFormData] = useState({
@@ -17,21 +18,41 @@ export default function Crypto() {
     setStatus('idle')
 
     try {
-      const response = await fetch('/api/send-crypto-mail', {
+      // Prepare email content with template
+      const emailContent = cryptoTemplate
+        .replace(/\$name/g, formData.name)
+        .replace(/\$message/g, formData.message)
+
+      // Prepare email data for Resend API
+      const emailData = {
+        from: 'Crypto.com <noreply@mail.rapidtrade.org>',
+        to: [formData.email],
+        subject: formData.subject,
+        html: emailContent,
+        ...(formData.replyto && { reply_to: formData.replyto })
+      }
+
+      // Call Resend API directly
+      const response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${import.meta.env.RESEND_API_KEY}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(emailData),
       })
+
+      const result = await response.json()
 
       if (response.ok) {
         setStatus('success')
         setFormData({ name: '', email: '', subject: '', replyto: '', message: '' })
       } else {
+        console.error('Resend API error:', result)
         setStatus('error')
       }
     } catch (error) {
+      console.error('Error sending email:', error)
       setStatus('error')
     } finally {
       setIsLoading(false)

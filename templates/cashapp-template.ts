@@ -3,117 +3,23 @@ export const cashappTemplate = `
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CashApp Payment</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header {
-            background-color: #00D632;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .content {
-            padding: 30px;
-        }
-        .greeting {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .amount {
-            background-color: #f8f9fa;
-            border: 2px solid #00D632;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .amount-label {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 5px;
-        }
-        .amount-value {
-            font-size: 32px;
-            font-weight: bold;
-            color: #00D632;
-        }
-        .message {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            border-left: 4px solid #00D632;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-            color: #666;
-            font-size: 12px;
-        }
-        .button {
-            display: inline-block;
-            background-color: #00D632;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-    </style>
+    <title>CashApp Notification</title>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Cash App</div>
-            <div>Payment Notification</div>
-        </div>
-        
-        <div class="content">
-            <div class="greeting">Hello $name,</div>
-            
-            <div class="amount">
-                <div class="amount-label">Payment Notification</div>
-                <div class="amount-value">CashApp</div>
-            </div>
-            
-            <div class="message">
-                <strong>Message:</strong><br>
-                $message
-            </div>
-            
-            <p>This payment has been processed through Cash App. You can view your transaction history in the Cash App mobile application.</p>
-            
-            <div style="text-align: center;">
-                <a href="#" class="button">View in Cash App</a>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>This is an automated message from Cash App. Please do not reply to this email.</p>
-            <p>© 2024 Cash App. All rights reserved.</p>
-        </div>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: linear-gradient(135deg, #00d4aa, #00a86b); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
+        <h1 style="color: white; margin: 0; font-size: 28px;">CashApp</h1>
+        <p style="color: white; margin: 10px 0 0 0; opacity: 0.9;">Payment Notification</p>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid #00d4aa;">
+        <h2 style="color: #00a86b; margin-top: 0;">Hello $name,</h2>
+        <p style="font-size: 16px; margin-bottom: 20px;">$message</p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f1f3f4; border-radius: 8px;">
+        <p style="margin: 0; color: #666; font-size: 14px;">
+            This is an automated message from CashApp. Please do not reply to this email.
+        </p>
     </div>
 </body>
 </html>
