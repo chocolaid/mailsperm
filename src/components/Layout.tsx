@@ -30,8 +30,8 @@ export default function Layout() {
         backdropFilter: 'blur(10px)',
         boxShadow: '0 0 20px rgba(0, 255, 0, 0.3)'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <Link 
               to="/" 
               style={{ 
@@ -53,7 +53,7 @@ export default function Layout() {
             >
               &gt; MAIL_SENDER.exe
             </Link>
-            <div style={{ display: 'flex', gap: '1.5rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link 
                 to="/about" 
                 style={{ 
@@ -115,7 +115,9 @@ export default function Layout() {
         padding: '2rem',
         minHeight: 'calc(100vh - 80px)',
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        maxWidth: '100vw',
+        overflow: 'hidden'
       }}>
         <Outlet />
       </main>

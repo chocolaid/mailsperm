@@ -46,7 +46,7 @@ export default function CashApp() {
   }
 
     return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+    <div style={{ maxWidth: '100%', margin: '0 auto', padding: '0 1rem' }}>
       {/* Terminal header */}
       <div style={{
         background: 'rgba(0, 0, 0, 0.8)',
@@ -71,7 +71,7 @@ export default function CashApp() {
         
         <div style={{ textAlign: 'center', marginTop: '1rem' }}>
           <h1 style={{
-            fontSize: '2rem',
+            fontSize: 'clamp(1.2rem, 3vw, 2rem)',
             margin: '0 0 0.5rem 0',
             color: '#00ff00',
             textShadow: '0 0 20px rgba(0, 255, 0, 0.5)',

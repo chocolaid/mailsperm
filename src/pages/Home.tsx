@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 
 export default function Home() {
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+    <div style={{ maxWidth: '100%', margin: '0 auto', padding: '0 1rem' }}>
       {/* Terminal-style header */}
       <div style={{
         background: 'rgba(0, 0, 0, 0.8)',
@@ -27,7 +27,7 @@ export default function Home() {
         
         <div style={{ textAlign: 'center', marginTop: '1rem' }}>
           <h1 style={{
-            fontSize: '2.5rem',
+            fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
             margin: '0 0 1rem 0',
             color: '#00ff00',
             textShadow: '0 0 20px rgba(0, 255, 0, 0.5)',
@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
       {/* Main content grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
         {/* CashApp Module */}
         <div style={{
           background: 'rgba(0, 0, 0, 0.7)',
@@ -238,8 +238,8 @@ export default function Home() {
         
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '1rem',
           fontFamily: 'monospace'
         }}>
           <div>
